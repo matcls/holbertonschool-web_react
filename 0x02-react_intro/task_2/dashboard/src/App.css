@@ -1,0 +1,37 @@
+:root {
+  --primary-color: #e01d3f;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.App-header {
+  align-items: center;
+  border-bottom: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.App-header img {
+  width: 200px;
+}
+
+.App-body {
+  margin: 50px;
+}
+
+.App-footer {
+  border-top: 3px solid var(--primary-color);
+  bottom: 0;
+  display: flex;
+  font-style: italic;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}

@@ -3,19 +3,12 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.App {
-  position: relative;
-  min-height: 100vh;
-}
-
 .App-header {
-  align-items: center;
-  border-bottom: 3px solid var(--primary-color);
-  color: var(--primary-color);
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  color: var(--primary-color);
   font-size: 20px;
-  margin: 0 auto;
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .App-header img {
@@ -28,10 +21,10 @@
 
 .App-footer {
   border-top: 3px solid var(--primary-color);
-  bottom: 0;
+  width: 100%;
   display: flex;
-  font-style: italic;
   justify-content: center;
   position: fixed;
-  width: 100%;
+  bottom: 0;
+  font-style: italic;
 }

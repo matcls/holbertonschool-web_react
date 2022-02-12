@@ -1,0 +1,24 @@
+:root {
+  --primary-color: #e01d3f;
+}
+
+.Notifications {
+  border: 1px dashed var(--primary-color);
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+.Notifications button img {
+  width: 10px;
+}
+
+[data-priority='default'] {
+  color: blue;
+}
+
+[data-priority='urgent'] {
+  color: red;
+}
+
+
+

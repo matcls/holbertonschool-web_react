@@ -1,12 +1,13 @@
-import './App.css';
-import { getFullYear, getFooterCopy } from './utils';
-import logo from './logo.jpg';
+import React from "react";
+import "./App.css";
+import { getFullYear, getFooterCopy } from "../utils/utils";
+import holberton_logo from "../assets/holberton_logo.jpg";
 
 function App() {
   return (
     <div className="App">
       <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={holberton_logo} className="App-logo" alt="logo" />
         <h1>School dashboard</h1>
       </div>
 

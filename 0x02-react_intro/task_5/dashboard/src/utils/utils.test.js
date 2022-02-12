@@ -22,5 +22,3 @@ describe('Basic tests', function () {
     });
   });
 });
-
-

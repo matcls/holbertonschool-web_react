@@ -6,14 +6,14 @@ export function getFooterCopy(isIndex) {
   let msg;
 
   if (isIndex) {
-    msg = 'Holberton School';
+    msg = "Holberton School";
   } else {
-    msg = 'Holberton School main dashboard';
+    msg = "Holberton School main dashboard";
   }
 
   return msg;
 }
 
 export function getLatestNotification() {
-  return '<strong>Urgent requirement</strong> - complete by EOD';
+  return "<strong>Urgent requirement</strong> - complete by EOD";
 }

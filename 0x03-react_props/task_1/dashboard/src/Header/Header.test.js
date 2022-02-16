@@ -10,7 +10,7 @@ describe('Test the <Header /> Component', () => {
   it('<Header /> renders without crashing', () => {
     expect(wrapper.exists()).toEqual(true);
   });
-  it('V<Header />  renders img', () => {
+  it('<Header />  renders img', () => {
     wrapper.update();
     expect(wrapper.find('div.header img')).toHaveLength(1);
   });

@@ -1,6 +1,10 @@
 import React from "react";
 import { shallow } from 'enzyme';
 import App from './App';
+import Header from '../Header/Header';
+import Login from '../Login/Login';
+import Footer from '../Footer/Footer';
+import Notifications from '../Notifications/Notifications';
 
 describe('Test the <App /> Component', () => {
   let wrapper;
@@ -11,16 +15,19 @@ describe('Test the <App /> Component', () => {
   it('<App /> renders without crashing', () => {
     expect(wrapper.exists()).toEqual(true);
   });
-  // it('<App /> renders a div with the class App-header', () => {
-  //   wrapper.update();
-  //   expect(wrapper.find('div.App-header')).toHaveLength(1);
-  // });
-  // it('<App /> renders a div with the class App-body', () => {
-  //   wrapper.update();
-  //   expect(wrapper.find('div.App-body')).toHaveLength(1);
-  // });
-  // it('<App /> renders a div with the class App-footer', () => {
-  //   wrapper.update();
-  //   expect(wrapper.find('div.App-footer')).toHaveLength(1);
-  // });
+  it("<App /> contains the <Notifications /> Component", () => {
+    expect(wrapper.contains(<Notifications />)).toEqual(true);
+  });
+
+  it("<App /> contains the <Header /> Component", () => {
+    expect(wrapper.contains(<Header />)).toEqual(true);
+  });
+
+  it("<App /> contains the <Login /> Component", () => {
+    expect(wrapper.contains(<Login />)).toEqual(true);
+  });
+
+  it("<App /> contains the <Footer /> Component", () => {
+    expect(wrapper.contains(<Footer />)).toEqual(true);
+  });
 });

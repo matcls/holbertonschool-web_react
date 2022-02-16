@@ -1,7 +1,3 @@
-:root {
-  --primary-color: #e01d3f;
-}
-
 .Notifications {
   border: 1px dashed var(--primary-color);
   margin-bottom: 20px;
@@ -12,10 +8,10 @@
   width: 10px;
 }
 
-[data-priority='default'] {
+[data-notification-type='default'] {
   color: blue;
 }
 
-[data-priority='urgent'] {
+[data-notification-type='urgent'] {
   color: red;
 }

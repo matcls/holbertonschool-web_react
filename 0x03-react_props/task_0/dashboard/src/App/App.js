@@ -7,7 +7,7 @@ import Notifications from "../Notifications/Notifications";
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Notifications />
       <div className='App-container'>
         <div className='App'>
@@ -20,7 +20,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -1,10 +1,16 @@
 .header {
   display: flex;
+  color: #e0344a;
   align-items: center;
-  color: var(--primary-color);
-  font-size: 20px;
+  border-bottom: thick solid #e0344a;
+  width: 100%;
+  position: fixed;
 }
 
 .header img {
-  width: 200px;
+  width: 144px;
+}
+
+.header h1 {
+  margin: 0;
 }

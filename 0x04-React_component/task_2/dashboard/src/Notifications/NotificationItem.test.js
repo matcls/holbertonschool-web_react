@@ -1,58 +1,46 @@
-import { shallow } from 'enzyme';
 import React from 'react';
+import { shallow } from 'enzyme';
 import NotificationItem from './NotificationItem';
 
-describe('<Notifications />', () => {
-  it('Verify that the basic rendering of the component works without crashing', () => {
+describe('<NotificationItem />', () => {
+  it('renders without crashing', () => {
     const wrapper = shallow(<NotificationItem />);
-    expect(wrapper.exists());
+    shallow(<NotificationItem />);
   });
-  it('Verify that by passing dummy type and value props, it renders the correct html (for example: type=“default” and value=“test”)', () => {
+
+  it('renders type and value props', () => {
     const wrapper = shallow(<NotificationItem type='default' value='test' />);
-    wrapper.update();
-    const listItem = wrapper.find('li');
-
-    expect(listItem).toHaveLength(1);
-    expect(listItem.text()).toEqual('test');
-    expect(listItem.prop('data-notification-type')).toEqual('default');
+    const li = wrapper.find('li');
+    expect(li).toHaveLength(1);
+    expect(li.text()).toEqual('test');
+    expect(li.prop('data-notification-type')).toEqual('default');
   });
-  it("Verify that by passing a dummy html prop, it renders the correct html (for example: html={{ __html: '<u>test</u>' }})", () => {
+
+  it('renders html prop', () => {
+    const text = 'Here is the list of notifications';
     const wrapper = shallow(
       <NotificationItem html={{ __html: '<u>test</u>' }} />
     );
-    wrapper.update();
-    const listItem = wrapper.find('li');
-    expect(listItem.html()).toEqual('<li><u>test</u></li>');
-  });
-
-  it('Passing a dummy html prop, it renders the correct html (for example', () => {
-    const wrapper = shallow(
-      <NotificationItem html={{ __html: '<u>test</u>' }} />
-    );
-    wrapper.update();
-    const listItem = wrapper.find('li');
-    expect(listItem.html()).toEqual(
+    const li = wrapper.find('li');
+    expect(li.html()).toEqual(
       '<li data-notification-type="default"><u>test</u></li>'
     );
   });
-  it('when calling the function markAsRead on an instance of the component, the spy is being called with the right message', () => {
-    const id = 27;
-
+});
+/*
+describe('markAsRead', () => {
+  it('markAsRead message', () => {
+    const id = 16;
     const wrapper = shallow(
       <NotificationItem type='default' value='test' id={id} />
     );
-
     const instance = wrapper.instance();
-
     instance.markAsRead = jest.fn();
-
     const listItem = wrapper.find('li').first();
-
     listItem.simulate('click');
-
     instance.markAsRead(id);
-
-    expect(instance.markAsRead).toHaveBeenCalledWith(27);
+    expect(instance.markAsRead).toHaveBeenCalledWith(16);
     jest.restoreAllMocks();
   });
 });
+*/

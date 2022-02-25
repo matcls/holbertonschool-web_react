@@ -1,8 +1,12 @@
+.bodySectionWithMargin {
+  margin-bottom: 40px;
+}
+
 .bodySection {
-  width: 100%;
-  margin-top: 160px;
   display: flex;
   flex-wrap: wrap;
+  margin-top: 160px;
+  width: 100%;
 }
 
 .bodySection h2 {

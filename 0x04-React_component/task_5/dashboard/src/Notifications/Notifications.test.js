@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Notifications from './Notifications';
 import { getLatestNotification } from '../utils/utils';
 
@@ -54,7 +54,7 @@ describe('listNotifications with values', () => {
   });
 
   it('values', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Notifications displayDrawer listNotifications={listNotifications} />
     );
     expect(wrapper.exists());
@@ -80,7 +80,7 @@ describe('listNotifications without values', () => {
   });
 
   it('empty', () => {
-    const wrapper = shallow(
+    const wrapper = mount(
       <Notifications displayDrawer listNotifications={listNotifications} />
     );
     expect(wrapper.exists());
@@ -92,7 +92,7 @@ describe('listNotifications without values', () => {
   });
 
   it('without listNotifications', () => {
-    const wrapper = shallow(<Notifications displayDrawer />);
+    const wrapper = mount(<Notifications displayDrawer />);
     const nItem = wrapper.find('NotificationItem');
     expect(nItem).toHaveLength(1);
     expect(nItem.html()).toEqual(
@@ -134,7 +134,7 @@ describe('updating the props of the component', () => {
     jest.restoreAllMocks();
   });
 
-  it('with a longer list, the component does rerender', () => {
+  it('update propo with a longer list, the component does rerender', () => {
     const listNotifications = [
       { id: 1, type: 'default', value: 'New course available' },
       { id: 2, type: 'urgent', value: 'New resume available' },

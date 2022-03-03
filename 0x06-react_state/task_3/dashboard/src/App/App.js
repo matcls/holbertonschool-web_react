@@ -101,7 +101,8 @@ class App extends Component {
           </BodySectionWithMarginBottom>
         ) : (
           <BodySectionWithMarginBottom title='Log in to continue'>
-            <Login logIn={this.logIn} />          </BodySectionWithMarginBottom>
+            <Login logIn={this.logIn} />  
+          </BodySectionWithMarginBottom>
         )}
         <BodySection title='News from the School'>
           <p className={css(styles.p)}>

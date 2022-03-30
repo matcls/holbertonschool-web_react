@@ -20,7 +20,6 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
   );
 
   if (isHeader === true) {
-    //
     if (textSecondCell === null) {
       element = (
         <th colSpan="2" className={css(styles.CourseListThSpan2)}>
@@ -35,7 +34,6 @@ function CourseListRow({ isHeader, textFirstCell, textSecondCell }) {
         </>
       );
     }
-    //
   } else if (isHeader === false) {
     element = (
       <>

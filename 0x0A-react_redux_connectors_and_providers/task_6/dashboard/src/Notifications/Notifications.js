@@ -181,8 +181,6 @@ const styles = StyleSheet.create({
   },
 
   notifications: {
-    // float: "right",
-    // border: `3px dashed ${cssVars.mainColor}`,
     padding: "10px",
     marginBottom: "20px",
     animationName: [borderKeyframes],
@@ -191,7 +189,6 @@ const styles = StyleSheet.create({
     animationFillMode: "forwards",
     ":hover": {
       border: `3px dashed deepSkyBlue`,
-      // animationFillMode: "forwards",
     },
     [screenSize.small]: {
       float: "none",
@@ -201,7 +198,6 @@ const styles = StyleSheet.create({
       fontSize: "20px",
       ":hover": {
         border: "none",
-        // animationFillMode: "forwards",
       },
       position: "absolute",
       background: "white",
@@ -239,7 +235,5 @@ const mapDispatchToProps = {
   fetchNotifications,
   markNotificationAsRead: markAsAread,
 };
-
-// export default Notifications;
 
 export default connect(mapStateToProps, mapDispatchToProps)(Notifications);

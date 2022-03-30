@@ -30,7 +30,6 @@ export class CourseList extends Component {
 
   render() {
     const { listCourses } = this.props;
-    // const listCourses = null;
 
     return (
       <table id="CourseList" className={css(styles.list)}>
@@ -107,7 +106,5 @@ const mapDispatchToProps = {
   selectCourse,
   unSelectCourse,
 };
-
-// export default CourseList;
 
 export default connect(mapStateToProps, mapDispatchToProps)(CourseList);

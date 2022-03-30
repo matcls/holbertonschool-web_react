@@ -31,9 +31,6 @@ describe("<Notifications />", () => {
     );
     wrapper.update();
     const listItem = wrapper.find("li");
-    // expect(listItem.html()).toEqual(
-    //   '<li data-notification-type="default"><u>test</u></li>'
-    // );
 
     expect(listItem.props()["data-notification-type"]).toEqual("default");
     expect(listItem.html()).toContain("<u>test</u>");

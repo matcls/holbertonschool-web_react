@@ -132,7 +132,6 @@ App.defaultProps = {
   displayDrawer: false,
   displayNotificationDrawer: () => {},
   hideNotificationDrawer: () => {},
-  login: () => {},
 };
 
 App.propTypes = {
@@ -196,7 +195,5 @@ const mapDispatchToProps = {
   login: loginRequest,
   logout,
 };
-
-// export default App;
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

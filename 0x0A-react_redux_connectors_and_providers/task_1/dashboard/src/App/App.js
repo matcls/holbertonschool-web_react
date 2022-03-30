@@ -208,6 +208,4 @@ const mapDispatchToProps = {
   hideNotificationDrawer,
 };
 
-// export default App;
-
 export default connect(mapStateToProps, mapDispatchToProps)(App);
